@@ -1,6 +1,6 @@
 {
   "name": "@syumai/esbuild-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "esbuild loader which runs esbuild's build command on given path.",
   "author": "syumai",
   "license": "MIT",
