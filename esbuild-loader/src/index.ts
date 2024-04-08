@@ -1,11 +1,12 @@
-import { LoaderDefinitionFunction } from "webpack";
-import { BuildOptions, buildSync } from "esbuild";
+import type { LoaderDefinitionFunction } from "webpack";
+import type { BuildOptions } from "esbuild";
+import { buildSync } from "esbuild";
 
 export type LoaderOptions = {
   build: BuildOptions;
 };
 
-const loader = function () {
+const loader: LoaderDefinitionFunction<LoaderOptions> = function () {
   const { build } = this.getOptions();
   const { errors, outputFiles } = buildSync({
     ...build,
@@ -24,6 +25,6 @@ const loader = function () {
     return;
   }
   return outputFiles[0].text;
-} satisfies LoaderDefinitionFunction<LoaderOptions>;
+};
 
 export default loader;
