@@ -1,0 +1,44 @@
+{
+  "name": "@syumai/esbuild-loader",
+  "version": "1.0.0",
+  "description": "esbuild loader which runs esbuild's build command on given path.",
+  "author": "syumai",
+  "license": "MIT",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "types": "dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup ./src/index.ts --format esm,cjs --dts --minify",
+    "publint": "publint",
+    "release": "npm run build && npm run publint && npm publish"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.cts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syumai/webpack-loaders.git"
+  },
+  "peerDependencies": {
+    "webpack": "^4.40.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "publint": "^0.2.7",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "esbuild": "^0.20.2"
+  }
+}
