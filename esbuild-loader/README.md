@@ -26,7 +26,7 @@ const config = {
         type: "asset/source",
         use: [
           {
-            loader: ["@syumai/esbuild-loader"],
+            loader: "@syumai/esbuild-loader",
             options: {
               build: {
                 minify: false,
