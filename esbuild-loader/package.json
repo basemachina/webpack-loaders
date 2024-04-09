@@ -1,15 +1,13 @@
 {
-  "name": "@syumai/esbuild-loader",
-  "version": "1.0.1",
+  "name": "@basemachina/esbuild-loader",
+  "version": "1.0.0",
   "description": "esbuild loader which runs esbuild's build command on given path.",
   "author": "syumai",
   "license": "MIT",
   "main": "dist/index.cjs",
   "type": "module",
   "types": "dist/index.d.cts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup ./src/index.ts --format esm,cjs --dts --minify",
     "publint": "publint",
@@ -31,7 +29,7 @@
     "url": "https://github.com/syumai/webpack-loaders.git"
   },
   "peerDependencies": {
-    "webpack": "^4.40.0 || ^5.0.0"
+    "webpack": "^5.0.0"
   },
   "devDependencies": {
     "publint": "^0.2.7",

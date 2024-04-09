@@ -1,12 +1,12 @@
 # esbuild-loader
 
-* A Webpack loader to run esbuild's build command on given path.
-* This loader is useful for embedding partial TypeScript codes into your another code as bundled string.
+-   A Webpack loader to run esbuild's build command on given path.
+-   This loader is useful for embedding partial TypeScript codes into your another code as bundled string.
 
 ## Installation
 
 ```
-npm i -D @syumai/esbuild-loader
+npm i -D @basemachina/esbuild-loader
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ const config = {
         type: "asset/source",
         use: [
           {
-            loader: "@syumai/esbuild-loader",
+            loader: "@basemachina/esbuild-loader",
             options: {
               build: {
                 minify: false,
@@ -41,20 +41,20 @@ const config = {
 
 ### Code
 
-* bar.ts
+-   bar.ts
 
 ```ts
 export const bar = "bar";
 ```
 
-* foo.ts
+-   foo.ts
 
 ```ts
 import { bar } from "./bar";
 export const fooBar = "foo" + bar;
 ```
 
-* index.ts
+-   index.ts
 
 ```ts
 import fooCode from "./foo?source";
@@ -73,7 +73,3 @@ export {
 ## License
 
 MIT
-
-## Author
-
-syumai
