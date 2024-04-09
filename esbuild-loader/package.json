@@ -2,7 +2,7 @@
   "name": "@basemachina/esbuild-loader",
   "version": "1.0.0",
   "description": "esbuild loader which runs esbuild's build command on given path.",
-  "author": "syumai",
+  "author": "BaseMachina Inc.",
   "license": "MIT",
   "main": "dist/index.cjs",
   "type": "module",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/syumai/webpack-loaders.git"
+    "url": "https://github.com/basemachina/webpack-loaders.git"
   },
   "peerDependencies": {
     "webpack": "^5.0.0"
